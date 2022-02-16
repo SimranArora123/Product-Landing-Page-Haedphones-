@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>  </title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Satisfy&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>  
+</head>
+<body onload="initializeMap()">
+  <div class="topnav" id="myTopnav">
+    <h2 style="float: left; color: rgb(124, 63, 182); font-family: 'Archivo', sans-serif; font-size: 35px;"><strong>beats</strong></h2>
+      <a href="one.html" class="active">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="product.html">Products</a>
+      <a href="profile.html">Profile</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+     <div class="bg">
+       <div class="content">
+       <h1><strong>Contact Us</strong></h1>
+       </div>
+       </div>
+       <form>      
+        <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+        <input name="email" type="text" class="feedback-input" placeholder="Email" />
+        <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+        <input type="submit" value="SUBMIT"/>
+      </form>
+      <div class="container">
+        <div>
+          <div id="map-canvas"></div>
+        </div>
+      </div>
+       <footer class="footer-distributed">
+
+        <div class="footer-right">
+      
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+      
+        </div>
+      
+        <div class="footer-left">
+      
+            <p class="footer-links">
+                <a class="link-1" href="one.html">Home</a>
+      
+                <a href="about.html">About</a>
+      
+                <a href="contact.html">Contact</a>
+      
+                <a href="/portfolio">Profile</a>
+      
+                <a href="/services">Cart</a>
+                <a href="/services">Product</a>
+      
+            
+            </p>
+           
+            <p><span style="color:rgb(124, 63, 182); font-family: 'Archivo', sans-serif; font-size: 25px;">beats</span> &copy; 2019</p>
+        </div>
+      
+      </footer>
+        
+    <script>
+      function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}function initializeMap() {
+  console.log('initialize');
+  var myOptions = {
+    center: new google.maps.LatLng(-34.397, 150.644),
+    zoom: 8,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("map-canvas"),
+    myOptions);
+}
+
+    </script>
+  </body>
+  </html>
